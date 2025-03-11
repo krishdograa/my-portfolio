@@ -1,4 +1,30 @@
-// Highlight active navbar link on scroll
+const githubRepo = "https://api.github.com/repos/krishdograa/my-portfolio/contents/reports"; 
+
+async function fetchReports() {
+    try {
+        let response = await fetch(githubRepo);
+        if (!response.ok) throw new Error("Failed to fetch reports");
+        
+        let data = await response.json();
+        let reportsContainer = document.getElementById("reports"); 
+        reportsContainer.innerHTML = "<h3>Reports</h3>";
+
+        data.forEach(file => {
+            let reportLink = document.createElement("a");
+            reportLink.href = file.download_url;
+            reportLink.innerText = file.name;
+            reportLink.target = "_blank";
+            reportsContainer.appendChild(reportLink);
+            reportsContainer.appendChild(document.createElement("br"));
+        });
+    } catch (error) {
+        console.error("Error loading reports:", error);
+        document.getElementById("reports").innerHTML = "<p>Error fetching reports.</p>";
+    }
+}
+
+fetchReports();
+
 document.addEventListener('scroll', function() {
     let sections = document.querySelectorAll("section");
     let navLinks = document.querySelectorAll(".nav-link");
