@@ -9,18 +9,16 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <nav id="navbar">
         <ul>
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#achievements" class="nav-link">Achievements</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#daily-log" class="nav-link">Things I Did Today</a></li>
+            <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+            <li><a href="#daily-log" class="nav-link" data-section="daily-log">Things I Did Today</a></li>
         </ul>
     </nav>
 
-    <!-- Home Section -->
     <section id="home">
         <div class="home-content">
             <h1><span> Welcome, I'm Krish Dogra</span></h1>
@@ -29,7 +27,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="about-container">
             <div class="about-left">
@@ -57,40 +54,47 @@
         </div>
     </section>
 
-    <!-- Achievements Section -->
     <section id="achievements">
         <h2>Achievements</h2>
-        <ul>
-            <li>🏆 Published research on NIDS and adversarial attacks</li>
-            <li>💻 Developed a CNN-LSTM-based intrusion detection system</li>
-            <li>🎓 Won XYZ Hackathon in AI & Cybersecurity</li>
-        </ul>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-container">
-            <div class="experience-card">
-                <h3>Intern - Cybersecurity</h3>
-                <p>Worked on network security and penetration testing.</p>
+        <div class="achievements-container">
+            <div class="achievement-box">
+                <p>🏆 Published research on NIDS and adversarial attacks</p>
             </div>
-            <div class="experience-card">
-                <h3>Research Assistant - AI</h3>
-                <p>Developed adversarial defense mechanisms for ML models.</p>
+            <div class="achievement-box">
+                <p>💻 Developed a CNN-LSTM-based intrusion detection system</p>
+            </div>
+            <div class="achievement-box">
+                <p>🎓 Won XYZ Hackathon in AI & Cybersecurity</p>
             </div>
         </div>
     </section>
 
-   <h1>Things I Did Today</h1>
-
-    <section id="what-i-did-today">
-    <h2>What I Did Today</h2>
-    <div id="reports">
-        <p>Loading reports...</p>
+    <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-container">
+        <div class="experience-card">
+            <h3>Intern - Cybersecurity</h3>
+            <p>Worked on network security and penetration testing.</p>
+        </div>
+        <div class="experience-card">
+            <h3>Research Assistant - AI</h3>
+            <p>Developed adversarial defense mechanisms for ML models.</p>
+        </div>
     </div>
+    <p>Placeholder content to create scrollable space. Add more details about your experience here.</p>
+    <p>More placeholder content...</p>
 </section>
 
+<section id="daily-log">
+    <h2>Things I Did Today</h2>
+    <div id="log-container">
+        <div id="reports">
+            <p>Loading reports...</p>
+        </div>
+    </div>
+    <p>Placeholder content to create scrollable space. Add your daily logs here.</p>
+    <p>More placeholder content...</p>
+</section>
 
 </body>
 </html>
