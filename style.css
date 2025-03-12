@@ -144,9 +144,17 @@ nav ul li a.active {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    width: 300px;
+    width: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+    color: black;
+    transition: all 0.3s ease-in-out;
 }
+
+.experience-card:hover {
+    transform: scale(1.08);
+}
+
 
 .achievements-container {
     display: flex;
@@ -170,28 +178,31 @@ nav ul li a.active {
     text-align: center;
     background: #fff;
     min-height: 50vh;
+
 }
 
-#reports {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+.report-item {
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #ddd; /* Subtle border */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.2s ease-in-out;
 }
 
-.report-box {
-    display: inline-block;
-    background: #fff;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+.report-item a {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap blue */
+    font-weight: bold;
 }
 
-.report-box:hover {
-    transform: scale(1.05);
+.report-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    
 }
+
 
 /* ✅ Sticky Navbar Adjustments */
 #sticky-tab {
@@ -217,13 +228,15 @@ nav ul li a.active {
 }
 
 .achievement-box {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
+   
+    color: black;
     padding: 15px;
-    margin: 10px;
+    margin: 40px;
+    width: 22%;
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+
 }
 
 .achievement-box:hover {

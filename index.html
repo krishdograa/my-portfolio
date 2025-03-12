@@ -6,24 +6,26 @@
     <title>Krish Dogra | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+        <link rel="icon" type="image/png" href="img3.png">
 </head>
 <body>
 
     <nav id="navbar">
         <ul>
             <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
-            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-            <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
-            <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
-            <li><a href="#daily-log" class="nav-link" data-section="daily-log">Things I Did Today</a></li>
+            <li><a href="#about" class="nav-link" data-section="about" class="btn" onclick="scrollToAbout(event)">About</a></li>
+            <li><a href="#achievements" class="nav-link" data-section="achievements" onclick="smoothScroll(event, 'achievements')">Achievements</a></li>
+<li><a href="#experience" class="nav-link" data-section="experience" onclick="smoothScroll(event, 'experience')">Experience</a></li>
+<li><a href="#daily-log" class="nav-link" data-section="daily-log" onclick="smoothScroll(event, 'daily-log')">Things I Did Today</a></li>
+
         </ul>
     </nav>
 
 <section id="home">
     <div class="home-content">
         <h1><span> Welcome, I'm Krish Dogra</span></h1>
-        <p style="color: whitesmoke;">Passionate about Cybersecurity & Protecting our digital world.</p>
-        <a href="#about" class="btn">Learn More</a>
+        <p style="color: whitesmoke; margin-bottom: 32px;">Passionate about Cybersecurity & Protecting our digital world.</p>
+        <a href="#about" class="btn" onclick="scrollToAbout(event)">Learn More</a>
     </div>
 </section>
 
@@ -31,25 +33,31 @@
         <div class="about-container">
             <div class="about-left">
                 <img src="img2.jpeg" alt="Krish Dogra">
-                <h2>Personal Details</h2>
+                <h2 style="text-align: center;">Personal Details</h2>
                 <p><strong>Name:</strong> Krish Dogra</p>
-                <p><strong>Field:</strong> AI & Cybersecurity</p>
-                <p><strong>Email:</strong> krishdogra@email.com</p>
+                <p><strong>Field:</strong> Cybersecurity</p>
+                <p><strong>Email:</strong> krishdograa@gmail.com</p>
 
-                <h3>Skills</h3>
-                <ul>
-                    <li>Machine Learning</li>
-                    <li>Cybersecurity</li>
-                    <li>Full-Stack Web Development</li>
-                    <li>SQL & Databases</li>
-                </ul>
+                
             </div>
             <div class="about-right">
                 <h2>About Me</h2>
-                <p>
-                    I'm an AI and Cybersecurity enthusiast with expertise in building robust models and
-                    securing digital environments. Passionate about learning and implementing cutting-edge technologies.
+                <p style="text-align: justify;">
+                     Enthusiastic and highly motivated student with a strong passion for cybersecurity and a keen interest in
+ developing expertise in threat analysis, network security, and ethical hacking. Eager to leverage foundational
+ knowledge in programming (Python, Linux) and cybersecurity principles gained through coursework, self-study,
+ and hands-on lab projects. Committed to continuous learning, problem-solving, and contributing to real-world
+ security challenges. Possess strong analytical skills, attention to detail, and a collaborative mindset. 
                 </p>
+
+                <h2>Skills</h2>
+                <ul style="color: dimgrey;">
+                    <li> Programming:  JAVA ◦ C/C++ ◦ Python ◦ SQL</li>
+                    <li>Web Development: HTML ◦ CSS ◦ JavaScript</li>
+                    <li>Security Testing & Tools: Metasploit ◦ Nmap ◦ Burp Suite ◦ Wireshark ◦ L0pht crack ◦ John the Ripper</li>
+                    <li>Reverse Engineering: Ghidra</li>
+                    <li>Networking & Security: TCP/IP ◦ Firewalls ◦ VPNs ◦  network protocols ◦ Intrusion detection/prevention.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -58,13 +66,19 @@
         <h2>Achievements</h2>
         <div class="achievements-container">
             <div class="achievement-box">
-                <p>🏆 Published research on NIDS and adversarial attacks</p>
+                <h3>White-Box Adversarial Exploitation of NIDS: Insights from FGSM, PGD, and C&W</h3>
+                <p>Presented at 2nd International Conference CICITN [2025], ABES, Ghaziabad (Awaiting Publication)
+Researched and developed a hybrid CNN-LSTM deep learning model to improve anomaly detection accuracy in network traffic.
+</p>
             </div>
             <div class="achievement-box">
-                <p>💻 Developed a CNN-LSTM-based intrusion detection system</p>
+                <h3>Academically ranked among the Top 10% of the students in CSE Branch at Amity University.</h3>
+                <p>Consistently maintaining a strong academic record with a focus on cybersecurity, machine learning, and network security.</p>        
             </div>
+
             <div class="achievement-box">
-                <p>🎓 Won XYZ Hackathon in AI & Cybersecurity</p>
+                <h3>Developed a CNN-LSTM-based Network Intrusion Detection System (NIDS)</h3>
+                <p> It achieved 99% accuracy on the CICIDS 2017 dataset. Implemented white-box adversarial attacks to test the robustness of Machine learning based security model.</p>
             </div>
         </div>
     </section>
@@ -73,27 +87,26 @@
     <h2>Experience</h2>
     <div class="experience-container">
         <div class="experience-card">
-            <h3>Intern - Cybersecurity</h3>
-            <p>Worked on network security and penetration testing.</p>
+            <h3> Quadrafort Technologies Private Limited  <div>Intern</div></h3>
+            <p>
+•   I Optimized JavaScript memory management to enhance application performance and reduce runtime errors.<br>
+•   Designed and created reusable React.js components, improving code maintainability.<br>
+•   Integrated RESTful APIs (Axios) with asynchronous data fetching, streamlining Agile workflows for cross-functional teams.<br>
+•   Deployed full-stack web applications via Netlify and integrated Firebase services (Firestore) for scalable backend functionality.
+</p>
         </div>
-        <div class="experience-card">
-            <h3>Research Assistant - AI</h3>
-            <p>Developed adversarial defense mechanisms for ML models.</p>
-        </div>
+        
     </div>
-    <p>Placeholder content to create scrollable space. Add more details about your experience here.</p>
-    <p>More placeholder content...</p>
-</section>
+    </section>
 
 <section id="daily-log">
-    <h2>Things I Did Today</h2>
+    <h2>Things I am working on</h2>
     <div id="log-container">
-        <div id="reports">
+        <div id="reports" >
             <p>Loading reports...</p>
         </div>
     </div>
-    <p>Placeholder content to create scrollable space. Add your daily logs here.</p>
-    <p>More placeholder content...</p>
+    
 </section>
 
 </body>
