@@ -22,7 +22,6 @@ nav {
     text-align: center;
     z-index: 1000;
     transition: background 0.4s ease-in-out;
-   
 }
 
 nav ul {
@@ -40,13 +39,13 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transform transition */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
     color: #ffcc00;
-    transform: scale(1.1); /* Added scale on hover/active */
+    transform: scale(1.1);
 }
 
 /* Home Section */
@@ -155,7 +154,6 @@ nav ul li a.active {
     transform: scale(1.08);
 }
 
-
 .achievements-container {
     display: flex;
     flex-wrap: wrap;
@@ -169,7 +167,7 @@ nav ul li a.active {
     border-radius: 8px;
     width: 300px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align:left;
+    text-align: left;
 }
 
 /* "Things I Did Today" Section */
@@ -178,31 +176,28 @@ nav ul li a.active {
     text-align: center;
     background: #fff;
     min-height: 50vh;
-
 }
 
 .report-item {
-    background-color: #f8f9fa; /* Light background */
-    border: 1px solid #ddd; /* Subtle border */
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
 
 .report-item a {
     text-decoration: none;
-    color: #007bff; /* Bootstrap blue */
+    color: #007bff;
     font-weight: bold;
 }
 
 .report-item:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    
+    transform: scale(1.05);
 }
-
 
 /* ✅ Sticky Navbar Adjustments */
 #sticky-tab {
@@ -215,11 +210,6 @@ nav ul li a.active {
     text-align: center;
 }
 
-.horizontal-text {
-    writing-mode: horizontal-tb;
-    transform: rotate(0deg);
-}
-
 /* 🏆 Achievements Box */
 .achievements-container {
     display: flex;
@@ -228,7 +218,6 @@ nav ul li a.active {
 }
 
 .achievement-box {
-   
     color: black;
     padding: 15px;
     margin: 40px;
@@ -236,14 +225,21 @@ nav ul li a.active {
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-
 }
 
 .achievement-box:hover {
     transform: scale(1.08);
 }
 
+/* Responsive Design */
+
+/* ✅ Tablet (iPads, 768px and up) */
 @media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
     nav ul li {
         display: block;
         margin: 10px 0;
@@ -252,10 +248,82 @@ nav ul li a.active {
     .about-container {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }
+
+    .about-right, .about-left {
+        width: 100%;
     }
 
     .experience-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .experience-card {
+        width: 90%;
+    }
+
+    .achievements-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .achievement-box {
+        width: 80%;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* ✅ Mobile (iPhones & small screens) */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .home-content h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left img {
+        max-width: 90%;
+    }
+
+    .experience-card {
+        width: 100%;
+        text-align: center;
+    }
+
+    .achievement-box {
+        width: 90%;
+        text-align: center;
+    }
+
+    .report-item {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .experience-card, .achievement-box {
+        width: 95%;
     }
 }
