@@ -79,6 +79,7 @@ nav ul li a.active {
     transition: background 0.3s ease-in-out;
 }
 
+
 .btn:hover {
     background: #ff9900;
 }

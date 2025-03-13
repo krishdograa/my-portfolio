@@ -1,1 +1,14 @@
+<<<<<<< HEAD
 
+=======
+[
+    {
+        "name": "report1.pdf",
+        "description": "This report contains an analysis of network security."
+    },
+    {
+        "name": "report2.pdf",
+        "description": "Summary of the latest intrusion detection research."
+    }
+]
+>>>>>>> ced46f6 (Added description)

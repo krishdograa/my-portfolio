@@ -176,26 +176,6 @@ dodocument.addEventListener("scroll", function () {
 window.addEventListener("scroll", revealSections);
 window.addEventListener("load", revealSections);
 
-function scrollToAbout(event) {
-        event.preventDefault(); // Prevent default jump
-        let aboutSection = document.getElementById("about");
-        let offset = 75; // Adjust this value between 50-100 pixels
 
-        if (aboutSection) {
-            let targetPosition = aboutSection.offsetTop - offset;
-            window.scrollTo({ top: targetPosition, behavior: "smooth" });
-        }
-    }
-
-function smoothScroll(event, sectionId) {
-        event.preventDefault(); // Prevent default anchor behavior
-        let targetSection = document.getElementById(sectionId);
-        let offset = 75; // Adjust between 50-100 pixels
-
-        if (targetSection) {
-            let targetPosition = targetSection.offsetTop - offset;
-            window.scrollTo({ top: targetPosition, behavior: "smooth" });
-        }
-    }
 
 
