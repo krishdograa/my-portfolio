@@ -314,8 +314,8 @@ nav ul li a.active {
     }
 
     .achievement-box {
-        width: 90%;
-        text-align: center;
+        width: 70%;
+        text-align: left;
     }
 
     .report-item {
@@ -323,7 +323,8 @@ nav ul li a.active {
         font-size: 14px;
     }
 
-    .experience-card, .achievement-box {
+    .experience-card {
         width: 95%;
+        text-align: left;
     }
 }
