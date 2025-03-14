@@ -1,5 +1,7 @@
-{
-    "report1.txt": "This is a comment for report1.txt",
-    "report2.pdf": "This is a comment for report2.pdf",
-    "report3.docx": "This is a comment for report3.docx"
-}
+[
+  {
+    "name": "Report 1",
+    "link": "https://github.com/krishdograa/my-portfolio/reports/ISC2-CC Domain 1.pdf",
+    "comment": "This report covers insights into network security vulnerabilities."
+  }
+]
