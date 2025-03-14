@@ -1,41 +1,62 @@
 // GitHub API to fetch reports
-const githubRepo = "https://api.github.com/repos/krishdograa/my-portfolio/contents/reports";
+const GITHUB_REPORTS_FOLDER = "https://api.github.com/repos/krishdograa/my-portfolio/contents/reports";
+const REPORTS_JSON_URL = "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/reports.json";
 
 async function fetchReports() {
-    let reportsContainer = document.getElementById("reports");
+    const reportsContainer = document.getElementById("reports");
     reportsContainer.innerHTML = "<p>Loading reports...</p>";
 
     try {
-        let response = await fetch(githubRepo);
-        if (!response.ok) throw new Error("Failed to fetch reports");
+        // Fetch both data sources simultaneously
+        const [filesResponse, jsonResponse] = await Promise.all([
+            fetch(GITHUB_REPORTS_FOLDER),
+            fetch(REPORTS_JSON_URL)
+        ]);
 
-        let data = await response.json();
-        reportsContainer.innerHTML = ""; // Clear previous content
+        if (!filesResponse.ok || !jsonResponse.ok) throw new Error("Failed to fetch data");
 
-        if (data.length === 0) {
-            reportsContainer.innerHTML = "<p>No reports available.</p>";
-            return;
-        }
+        const [filesData, jsonData] = await Promise.all([
+            filesResponse.json(),
+            jsonResponse.json()
+        ]);
 
-        data.forEach((file) => {
-            let reportDiv = document.createElement("div");
-            reportDiv.classList.add("report-item");
+        reportsContainer.innerHTML = "";
 
-            let reportLink = document.createElement("a");
-            reportLink.href = file.download_url;
-            reportLink.innerText = file.name;
-            reportLink.target = "_blank";
+        // Combine both data sources
+        filesData.forEach(file => {
+            // Find matching metadata from JSON
+            const reportInfo = jsonData.find(item => item.name === file.name);
 
-            reportDiv.appendChild(reportLink);
+            const reportDiv = document.createElement("div");
+            reportDiv.className = "report-item";
+
+            reportDiv.innerHTML = `
+                <a href="${file.download_url}" target="_blank" class="report-link">
+                    ${file.name}
+                </a>
+                ${reportInfo ? `<p class="report-comment">${reportInfo.comment}</p>` : ''}
+                
+            `;
+
             reportsContainer.appendChild(reportDiv);
         });
+
     } catch (error) {
-        console.error("Error loading reports:", error);
-        reportsContainer.innerHTML = "<p>Error fetching reports.</p>";
+        console.error("Error:", error);
+        reportsContainer.innerHTML = `<p class="error">Error loading reports. ${error.message}</p>`;
     }
 }
 
+// Helper function to format file size
+function formatFileSize(size) {
+    if (size < 1024) return `${size} bytes`;
+    else if (size < 1024 * 1024) return `${(size / 1024).toFixed(2)} KB`;
+    else if (size < 1024 * 1024 * 1024) return `${(size / (1024 * 1024)).toFixed(2)} MB`;
+    else return `${(size / (1024 * 1024 * 1024)).toFixed(2)} GB`;
+}
+
 fetchReports(); // Call function on page load
+
 
 // Smooth scrolling and active section highlighting
 document.addEventListener("scroll", function () {

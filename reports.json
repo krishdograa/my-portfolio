@@ -1,7 +1,71 @@
 [
     {
         "name": "ISC2-CC Domain 1.pdf",
-        "comment": "Comprehensive penetration testing report covering OWASP Top 10 vulnerabilities"
+        "comment": "ISC2 CC Domain 1: Security Principles covers Identity Assurance, ensuring users are verified before access; Privacy Control Mechanisms, protecting sensitive data; Safeguarding Data, implementing encryption and security measures; and Strategic Risk Management, identifying and mitigating risks to protect systems and information from threats while ensuring compliance and security."
+    },
+    {
+        "name": "ISC2-CC Domain 2.pdf",
+        "comment": "ISC2 CC Domain 2: Incident Response & Business Continuity focuses on maintaining availability through Incident Response (IR), Business Continuity (BC), and Disaster Recovery (DR) plans. IR handles unexpected issues, BC ensures operations continue, and DR restores normalcy if both fail. Cybersecurity protects systems, data, and people beyond just technical measures."
+    },
+    {
+        "name": "ISC2-CC Domain 3.pdf",
+        "comment": "ISC2 CC Domain 3: Access Control Concepts covers physical and logical controls to manage security. It defines who gets access, why, and how through Security Control Protocols, Access Control Strategies, and User Privilege Administration. These measures ensure only authorized users access critical systems, enhancing overall organizational security."
+    },
+    {
+        "name": "John the Ripper - Password Cracker.pdf",
+        "comment": "John the Ripper - Password Cracker is a powerful tool for identifying and cracking password hashes. In this I detected hash types, performs dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. Using wordlists, rules, and incremental modes, John the Ripper efficiently tests password security and aids in ethical hacking assessments."
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
     },
     {
         "name": "malware-analysis.docx",
