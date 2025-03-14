@@ -79,7 +79,6 @@ nav ul li a.active {
     transition: background 0.3s ease-in-out;
 }
 
-
 .btn:hover {
     background: #ff9900;
 }
@@ -232,15 +231,8 @@ nav ul li a.active {
     transform: scale(1.08);
 }
 
-/* Responsive Design */
 
-/* ✅ Tablet (iPads, 768px and up) */
 @media (max-width: 768px) {
-    nav ul {
-        text-align: center;
-        padding: 0;
-    }
-
     nav ul li {
         display: block;
         margin: 10px 0;
@@ -248,84 +240,52 @@ nav ul li a.active {
 
     .about-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 
-    .about-right, .about-left {
+    .about-left, .about-right {
         width: 100%;
     }
 
-    .experience-container {
-        flex-direction: column;
-        align-items: center;
+    .achievement-box, .experience-card {
+        width: 75%; /* Adjust width for mobile */
+        margin-bottom: -30px;
+        text-align: left;
     }
 
-    .experience-card {
-        width: 90%;
-    }
-
-    .achievements-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .achievement-box {
-        width: 80%;
-        text-align: center;
+    #home {
+        height: auto;
+        padding: 100px 10px;
     }
 
     .home-content h1 {
         font-size: 2.5em;
     }
-}
 
-/* ✅ Mobile (iPhones & small screens) */
-@media (max-width: 480px) {
-    nav {
-        padding: 10px 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .home-content h1 {
+    #achievements h1 {
         font-size: 2em;
+        margin-bottom: -20px;
     }
 
-    .btn {
-        padding: 10px 20px;
-        font-size: 14px;
+    /* Add margin and padding to separate sections */
+    #about, #achievements, #experience, #daily-log {
+        
+        padding: 50px 20px;
+        box-sizing: border-box; /* Ensure padding doesn't affect overall width */
     }
 
-    .about-container {
-        flex-direction: column;
-        text-align: center;
+    #achievements {
+        margin-top: 650px;
     }
 
-    .about-left img {
-        max-width: 90%;
+    #about{
+        margin-top: 50px;
     }
 
-    .experience-card {
-        width: 100%;
-        text-align: center;
+    #experience{
+        margin-top: 480px;
     }
 
-    .achievement-box {
-        width: 70%;
-        text-align: left;
-    }
-
-    .report-item {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    .experience-card {
-        width: 95%;
-        text-align: left;
+    #daily-log{
+        margin-top: 90px;
     }
 }
