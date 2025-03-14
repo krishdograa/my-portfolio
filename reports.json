@@ -1,7 +1,10 @@
 [
-  {
-    "name": "Report 1",
-    "link": "https://github.com/krishdograa/my-portfolio/reports/ISC2-CC Domain 1.pdf",
-    "comment": "This report covers insights into network security vulnerabilities."
-  }
+    {
+        "name": "pentest-report-2024.pdf",
+        "comment": "Comprehensive penetration testing report covering OWASP Top 10 vulnerabilities"
+    },
+    {
+        "name": "malware-analysis.docx",
+        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+    }
 ]
