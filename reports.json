@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-
-=======
-[
-    {
-        "name": "report1.pdf",
-        "description": "This report contains an analysis of network security."
-    },
-    {
-        "name": "report2.pdf",
-        "description": "Summary of the latest intrusion detection research."
-    }
-]
->>>>>>> ced46f6 (Added description)
+{
+    "report1.txt": "This is a comment for report1.txt",
+    "report2.pdf": "This is a comment for report2.pdf",
+    "report3.docx": "This is a comment for report3.docx"
+}

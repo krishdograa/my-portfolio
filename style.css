@@ -124,6 +124,25 @@ nav ul li a.active {
     color: #555;
     line-height: 1.6;
 }
+.head123{
+    font-size: 65px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+.head1234{
+    font-size: 65px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.head12345{
+    font-size: 65px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
 
 /* Achievements & Experience */
 #achievements, #experience {
@@ -234,7 +253,7 @@ nav ul li a.active {
 
 @media (max-width: 768px) {
     nav ul li {
-        display: block;
+       
         margin: 10px 0;
     }
 
@@ -246,12 +265,16 @@ nav ul li a.active {
         width: 100%;
     }
 
-    .achievement-box, .experience-card {
-        width: 75%; /* Adjust width for mobile */
-        margin-bottom: -30px;
+    .achievement-box {
+        width: 75%; 
         text-align: left;
+       margin-bottom: -15px;
     }
+    .experience-card{
+        width: 75%; 
+        text-align: left;
 
+    }
     #home {
         height: auto;
         padding: 100px 10px;
@@ -261,9 +284,26 @@ nav ul li a.active {
         font-size: 2.5em;
     }
 
-    #achievements h1 {
-        font-size: 2em;
+
+    .head123{
+        font-size: 50px;
+        margin-top: -10px;
         margin-bottom: -20px;
+
+    }
+    .head1234{
+        font-size: 50px;
+        margin-top: 120px;
+        margin-bottom: 60px;
+        font-weight: bold;
+    }
+
+    .head12345{
+        font-size: 50px;
+        margin-top: 120px;
+        margin-bottom: 50px;
+        font-weight: bold;
+
     }
 
     /* Add margin and padding to separate sections */
@@ -274,7 +314,8 @@ nav ul li a.active {
     }
 
     #achievements {
-        margin-top: 650px;
+        margin-top: 740px;
+
     }
 
     #about{
@@ -282,7 +323,7 @@ nav ul li a.active {
     }
 
     #experience{
-        margin-top: 480px;
+        margin-top: 350px;
     }
 
     #daily-log{
