@@ -1,7 +1,7 @@
 [
     {
         "name": "ISC2-CC Domain 1.pdf",
-        "image": "ISC2-CC Domain 1.png",
+        "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/ISC2-CC Domain 1.png",
         "comment": "ISC2 CC Domain 1: Security Principles covers Identity Assurance, ensuring users are verified before access; Privacy Control Mechanisms, protecting sensitive data; Safeguarding Data, implementing encryption and security measures; and Strategic Risk Management, identifying and mitigating risks to protect systems and information from threats while ensuring compliance and security."
     },
     {
