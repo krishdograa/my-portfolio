@@ -16,8 +16,8 @@
         "comment": "John the Ripper - Password Cracker is a powerful tool for identifying and cracking password hashes. In this I detected hash types, performs dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. Using wordlists, rules, and incremental modes, John the Ripper efficiently tests password security and aids in ethical hacking assessments."
     },
     {
-        "name": "malware-analysis.docx",
-        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+        "name": "ISC2-CC Domain 4.pdf",
+        "comment": "In ISC2 CC Domain 4, I learned about network security, covering firewalls, IDS/IPS, VPNs, and secure network design. I explored wireless security, segmentation, access controls, and secure protocols like TLS/IPsec. Threats such as DDoS and MITM attacks were discussed, along with best practices for monitoring and incident response."
     },
     {
         "name": "malware-analysis.docx",
