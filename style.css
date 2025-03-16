@@ -17,7 +17,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: #141414;
     padding: 15px 0;
     text-align: center;
     z-index: 1000;
@@ -50,8 +50,8 @@ nav ul li a.active {
 
 /* Home Section */
 #home {
-    background: url('img/img1.jpg') no-repeat center center/cover;
-    height: 100vh;
+    background: url('img/background.jpg') no-repeat center center/cover;
+    height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,27 +114,32 @@ nav ul li a.active {
 .about-right {
     flex: 2;
     min-width: 300px;
+
 }
 
 .about-right h2 {
-    color: #333;
+    color: rgba(39,65,119,255);
+
 }
 
 .about-right p {
-    color: #555;
+    color: black;
     line-height: 1.6;
+
 }
 .head123{
     font-size: 65px;
     margin-top: 30px;
     margin-bottom: 50px;
     font-weight: bold;
+    color: rgba(39,65,119,255);
 }
 .head1234{
     font-size: 65px;
     margin-top: 30px;
     margin-bottom: 50px;
     font-weight: bold;
+    color: rgba(39,65,119,255)
 }
 
 .head12345{
@@ -142,6 +147,7 @@ nav ul li a.active {
     margin-top: 30px;
     margin-bottom: 50px;
     font-weight: bold;
+    color: rgba(39,65,119,255)
 }
 
 /* Achievements & Experience */
@@ -156,11 +162,14 @@ nav ul li a.active {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-top: 90px;
+    background-color: rgba(39,65,119,255);
 }
 
 .experience-card {
     background: white;
     padding: 20px;
+    margin: 65px;
     border-radius: 8px;
     width: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -168,6 +177,8 @@ nav ul li a.active {
     color: black;
     transition: all 0.3s ease-in-out;
 }
+
+
 
 .experience-card:hover {
     transform: scale(1.08);
@@ -178,51 +189,71 @@ nav ul li a.active {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    background-color: rgba(39,65,119,255);
+    margin-top: 70px;
 }
 
 .achievement-box {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    width: 300px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     text-align: left;
 }
 
-/* "Things I Did Today" Section */
+/* Daily Log Section - Arrange Items Horizontally */
 #daily-log {
     padding: 50px;
-    text-align: center;
     background: #fff;
-    min-height: 60vh;
+    min-height: 70vh;
     padding-bottom: 150px;
+}
+
+#daily-log .head12345 {
+    text-align: center;
+    margin-bottom: 50px; /* Adjust margin as needed */
+}
+
+#reports {  /* NEW CONTAINER */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
 
 }
 
+
+
 .report-item {
+    flex: 1 1 calc(33.33% - 50px);  /* Improved flex declaration */
+    min-width: 300px; 
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     padding: 10px;
-    margin: 5px 0;
     border-radius: 5px;
     text-align: justify;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-    min-height: 10vh;
-}
-
-.report-item a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-
+    flex-basis: calc(33.33% - 10px); /* Use flex-basis for better handling */
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0; 
+    box-sizing: border-box; 
 }
 
 .report-item:hover {
     transform: scale(1.05);
 }
 
-/* ✅ Sticky Navbar Adjustments */
+.report-item a {
+    text-decoration: none;
+    color: rgba(39,65,119,255);
+    font-weight: bold;
+}
+
 #sticky-tab {
     position: fixed;
     top: 0;
@@ -233,7 +264,6 @@ nav ul li a.active {
     text-align: center;
 }
 
-/* 🏆 Achievements Box */
 .achievements-container {
     display: flex;
     flex-wrap: wrap;
@@ -243,8 +273,8 @@ nav ul li a.active {
 .achievement-box {
     color: black;
     padding: 15px;
-    margin: 40px;
-    width: 22%;
+    margin: 50px 20px;
+    width: 23%;
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
@@ -252,6 +282,7 @@ nav ul li a.active {
 
 .achievement-box:hover {
     transform: scale(1.08);
+
 }
 
 
