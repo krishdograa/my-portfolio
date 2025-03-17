@@ -1,4 +1,3 @@
-// GitHub API to fetch reports
 const GITHUB_REPORTS_FOLDER = "https://api.github.com/repos/krishdograa/my-portfolio/contents/reports";
 const REPORTS_JSON_URL = "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/reports.json";
 
@@ -7,55 +6,55 @@ async function fetchReports() {
     reportsContainer.innerHTML = "<p>Loading reports...</p>";
 
     try {
-        // Fetch both data sources simultaneously
-        const [filesResponse, jsonResponse] = await Promise.all([
+        // Fetch data
+        const [filesRes, jsonRes] = await Promise.all([
             fetch(GITHUB_REPORTS_FOLDER),
             fetch(REPORTS_JSON_URL)
         ]);
 
-        if (!filesResponse.ok || !jsonResponse.ok) throw new Error("Failed to fetch data");
-
+        if (!filesRes.ok || !jsonRes.ok) throw new Error("Data fetch failed");
+        
         const [filesData, jsonData] = await Promise.all([
-            filesResponse.json(),
-            jsonResponse.json()
+            filesRes.json(),
+            jsonRes.json()
         ]);
 
         reportsContainer.innerHTML = "";
 
-        // Combine both data sources
-        filesData.forEach(file => {
-            // Find matching metadata from JSON
+        // Process files
+        for (const file of filesData) {
             const reportInfo = jsonData.find(item => item.name === file.name);
+            if (!reportInfo) continue;
 
             const reportDiv = document.createElement("div");
             reportDiv.className = "report-item";
 
             reportDiv.innerHTML = `
-                <a href="${file.download_url}" target="_blank" class="report-link">
+                ${reportInfo.image ? `
+                    <img src="${reportInfo.image}" 
+                         alt="${file.name}" 
+                         class="report-image"
+                         "> <!-- Remove if image fails to load -->
+                ` : ''}
+                <a href="${file.download_url}" 
+                   target="_blank" 
+                   class="report-link">
                     ${file.name}
                 </a>
-                ${reportInfo ? `<p class="report-comment">${reportInfo.comment}</p>` : ''}
-                
+                ${reportInfo.comment ? `<p class="report-comment">${reportInfo.comment}</p>` : ''}
             `;
 
             reportsContainer.appendChild(reportDiv);
-        });
+        }
 
     } catch (error) {
         console.error("Error:", error);
-        reportsContainer.innerHTML = `<p class="error">Error loading reports. ${error.message}</p>`;
+        reportsContainer.innerHTML = `<p class="error">Failed to load reports: ${error.message}</p>`;
     }
 }
 
-// Helper function to format file size
-function formatFileSize(size) {
-    if (size < 1024) return `${size} bytes`;
-    else if (size < 1024 * 1024) return `${(size / 1024).toFixed(2)} KB`;
-    else if (size < 1024 * 1024 * 1024) return `${(size / (1024 * 1024)).toFixed(2)} MB`;
-    else return `${(size / (1024 * 1024 * 1024)).toFixed(2)} GB`;
-}
-
-fetchReports(); // Call function on page load
+// Call function on page load
+fetchReports();
 
 
 // Smooth scrolling and active section highlighting
