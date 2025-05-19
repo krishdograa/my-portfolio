@@ -1,30 +1,9 @@
 [
-    {
-        "name": "ISC2-CC Domain 1.pdf",
-	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/ISC2-CC%20Domain%201.png",
-        "comment": "ISC2 CC Domain 1: Security Principles covers Identity Assurance, ensuring users are verified before access; Privacy Control Mechanisms, protecting sensitive data; Safeguarding Data, implementing encryption and security measures; and Strategic Risk Management, identifying and mitigating risks to protect systems and information from threats while ensuring compliance and security."
-    },
-    {
-        "name": "ISC2-CC Domain 2.pdf",
-	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/ISC2-CC%20Domain%202.png",
-        "comment": "ISC2 CC Domain 2: Incident Response & Business Continuity focuses on maintaining availability through Incident Response (IR), Business Continuity (BC), and Disaster Recovery (DR) plans. IR handles unexpected issues, BC ensures operations continue, and DR restores normalcy if both fail. Cybersecurity protects systems, data, and people beyond just technical measures."
-    },
-    {
-        "name": "ISC2-CC Domain 3.pdf",
-	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/ISC2-CC%20Domain%203.png",
-
-        "comment": "ISC2 CC Domain 3: Access Control Concepts covers physical and logical controls to manage security. It defines who gets access, why, and how through Security Control Protocols, Access Control Strategies, and User Privilege Administration. These measures ensure only authorized users access critical systems, enhancing overall organizational security."
-    },
+    
     {
         "name": "John the Ripper - Password Cracker.pdf",
 	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/John%20the%20Ripper%20-%20Password%20Cracker.png",
         "comment": "John the Ripper - Password Cracker is a powerful tool for identifying and cracking password hashes. In this I detected hash types, performs dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. Using wordlists, rules, and incremental modes, John the Ripper efficiently tests password security and aids in ethical hacking assessments."
-    },
-    {
-        "name": "ISC2-CC Domain 4.pdf",
-	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/ISC2-CC%20Domain%204.png",
-
-        "comment": "In ISC2 CC Domain 4, I learned about network security, covering firewalls, IDS/IPS, VPNs, and secure network design. I explored wireless security, segmentation, access controls, and secure protocols like TLS/IPsec. Threats such as DDoS and MITM attacks were discussed, along with best practices for monitoring and incident response."
     },
     {
         "name": "Cain and Abel.pdf",
