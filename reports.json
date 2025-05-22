@@ -9,8 +9,8 @@
     {
         "name": "Cain and Abel.pdf",
 	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/Cain%20and%20Abel.png",
-        "comment": "I installed Cain and Abel and explored its password-cracking capabilities. I tested cracking different hashes, including MD5, SHA-1, and NTLM. Additionally, I demonstrated both dictionary and brute-force attacks to recover passwords, showcasing the tool's effectiveness in ethical hacking and password security analysis."
-	"youtube": "https://www.youtube.com/watch?v=videoID1"
+        "comment": "I installed Cain and Abel and explored its password-cracking capabilities. I tested cracking different hashes, including MD5, SHA-1, and NTLM. Additionally, I demonstrated both dictionary and brute-force attacks to recover passwords, showcasing the tool's effectiveness in ethical hacking and password security analysis.",
+	    "youtube": "https://www.youtube.com/watch?v=videoID1"
     },
     {
         "name": "malware-analysis.docx",
