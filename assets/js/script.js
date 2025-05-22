@@ -124,6 +124,15 @@ async function fetchReports() {
                     ${file.name}
                 </a>
                 ${reportInfo.comment ? `<p class="report-comment">${reportInfo.comment}</p>` : ''}
+                ${reportInfo.youtube ? `
+        <p>
+          <a href="${reportInfo.youtube}" 
+             target="_blank" 
+             class="youtube-link" 
+             style="color: #e62117; font-weight: bold; text-decoration: underline;">
+            ▶ Watch YouTube Video
+          </a>
+        </p>` : ''}
             `;
 
             reportsContainer.appendChild(reportDiv);
