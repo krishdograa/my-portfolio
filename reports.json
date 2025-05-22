@@ -3,7 +3,7 @@
     {
         "name": "John the Ripper - Password Cracker.pdf",
 	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/John%20the%20Ripper%20-%20Password%20Cracker.png",
-        "comment": "John the Ripper - Password Cracker is a powerful tool for identifying and cracking password hashes. In this I detected hash types, performs dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. Using wordlists, rules, and incremental modes, John the Ripper efficiently tests password security and aids in ethical hacking assessments."
+        "comment": "It is a powerful tool for identifying and cracking password hashes. Here, I detected hash types, performs dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. Using wordlists, rules, and incremental modes, we can efficiently tests password security."
     },
     {
         "name": "Cain and Abel.pdf",
