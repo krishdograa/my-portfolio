@@ -118,21 +118,32 @@ async function fetchReports() {
                          class="report-image"
                          "> <!-- Remove if image fails to load -->
                 ` : ''}
-                <a href="${file.download_url}" 
-                   target="_blank" 
-                   class="report-link">
-                    ${file.name}
-                </a>
+                
                 ${reportInfo.comment ? `<p class="report-comment">${reportInfo.comment}</p>` : ''}
+                
+
                 ${reportInfo.youtube ? `
         <p>
           <a href="${reportInfo.youtube}" 
              target="_blank" 
              class="youtube-link" 
-             style="color: #e62117; font-weight: bold; text-decoration: underline;">
-            ▶ Watch YouTube Video
+             style="color: #e62117; font-weight: bold; ">
+            ▶ Watch  Video
           </a>
         </p>` : ''}
+
+        <a href="${reportInfo.medium}" 
+             target="_blank" 
+             
+             style="color: white; font-weight: bold; ">
+            ▶ See it on Medium
+          </a>
+
+        <a href="${file.download_url}" 
+                   target="_blank" 
+                   class="report-link">
+                 ▶ Download Report 
+                </a>
             `;
 
             reportsContainer.appendChild(reportDiv);
