@@ -3,7 +3,7 @@
     {
         "name": "John the Ripper - Password Cracker.pdf",
 	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/John%20the%20Ripper%20-%20Password%20Cracker.png",
-        "comment": "It is a powerful tool for identifying and cracking password hashes. Here, I detected hash types, performs dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. Using wordlists, rules, and incremental modes, we can efficiently tests password security.",
+        "comment": "It is a powerful tool for identifying and cracking password hashes. Here, I first showed how to detect hash types, perform dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. This can be done using wordlists, rules, and incremental modes, we can efficiently tests password security.",
 	"youtube": "https://youtu.be/0xwoCZCS5Nc?si=7YKJL8T40q1VMR59",
     "medium": "https://medium.com/@krishdograa/john-the-ripper-password-cracking-tool-a85c2920da30"
     },
