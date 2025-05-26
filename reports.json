@@ -16,9 +16,9 @@
     },
     {
         "name": "Introduction to Hashcat.pdf",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/refs/heads/main/report-images/hashcat.jpg",
         "comment": "I Used Hashcat to explore various attacks, focusing on password recovery through dictionary, brute-force, and other techniques. Analyzed cracking statistics, kernel performance, and candidate generation. I also demonstrated password cracking while interpreting Hashcat’s output metrics, session details, and recovery status.",
-    "youtube": "",
+    "youtube": "https://youtu.be/JJ5r5Z6G2Zo?si=r0zitn-utKOK_G62",
     "medium": ""
     },
     {
