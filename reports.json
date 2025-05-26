@@ -15,13 +15,6 @@
     "medium": "https://medium.com/@krishdograa/cain-and-abel-for-password-recovery-07b26bfbd392"
     },
     {
-        "name": "Introduction to Hashcat.pdf",
-	"image": "",
-        "comment": "I used Hashcat to explore various attacks, focusing on password recovery through dictionary, brute-force, and other techniques. Analyzed cracking statistics, kernel performance, and candidate generation. Also demonstrated password cracking while interpreting Hashcat’s output metrics, session details, and recovery status.",
-	"youtube": "",
-    "medium": ""
-    },
-    {
         "name": "malware-analysis.docx",
         "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
     },
