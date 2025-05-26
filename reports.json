@@ -3,7 +3,7 @@
     {
         "name": "John the Ripper - Password Cracker.pdf",
 	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/John%20the%20Ripper%20-%20Password%20Cracker.png",
-        "comment": "It is a powerful tool for identifying and cracking password hashes. Here, I first showed how to detect hash types, perform dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. This can be done using wordlists, rules, and incremental modes, we can efficiently tests password security.",
+        "comment": "John the Ripper is a powerful tool for identifying and cracking password hashes. Here, I first showed how to detect hash types, perform dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. This can be done using wordlists, rules, and incremental modes, we can efficiently tests password security.",
 	"youtube": "https://youtu.be/0xwoCZCS5Nc?si=7YKJL8T40q1VMR59",
     "medium": "https://medium.com/@krishdograa/john-the-ripper-password-cracking-tool-a85c2920da30"
     },
@@ -18,8 +18,8 @@
         "name": "Introduction to Hashcat.pdf",
     "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/hashcat.png",
         "comment": "I Used Hashcat to explore various attacks, focusing on password recovery through dictionary, brute-force, and other techniques. Analyzed cracking statistics, kernel performance, and candidate generation. I also demonstrated password cracking while interpreting Hashcat’s output metrics, session details, and recovery status.",
-    "youtube": "https://youtu.be/JJ5r5Z6G2Zo?si=r0zitn-utKOK_G62",
-    "medium": ""
+    "youtube": "https://youtu.be/ztL9rIVOtGE?si=7FRgo1Sz2PCgQ04B",
+    "medium": "https://medium.com/@krishdograa/introduction-to-hashcat-your-complete-guide-to-password-cracking-9772021eae6f"
     },
     {
         "name": "malware-analysis.docx",
