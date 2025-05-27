@@ -5,21 +5,24 @@
 	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/John%20the%20Ripper%20-%20Password%20Cracker.png",
         "comment": "John the Ripper is a powerful tool for identifying and cracking password hashes. Here, I first showed how to detect hash types, perform dictionary and brute-force attacks, and cracks protected ZIP files and NTLM hashes. This can be done using wordlists, rules, and incremental modes, we can efficiently tests password security.",
 	"youtube": "https://youtu.be/0xwoCZCS5Nc?si=7YKJL8T40q1VMR59",
-    "medium": "https://medium.com/@krishdograa/john-the-ripper-password-cracking-tool-a85c2920da30"
+    "medium": "https://medium.com/@krishdograa/john-the-ripper-password-cracking-tool-a85c2920da30",
+    "category": "Password Auditing"
     },
     {
         "name": "Cain and Abel.pdf",
 	"image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/Cain%20and%20Abel.png",
         "comment": "I installed Cain and Abel and explored its password-cracking capabilities. I tested cracking different hashes, including MD5, SHA-1, and NTLM. Additionally, I demonstrated both dictionary and brute-force attacks to recover passwords, showcasing the tool's effectiveness in ethical hacking and password security analysis.",
 	"youtube": "https://youtu.be/jnp6C1I218I",
-    "medium": "https://medium.com/@krishdograa/cain-and-abel-for-password-recovery-07b26bfbd392"
+    "medium": "https://medium.com/@krishdograa/cain-and-abel-for-password-recovery-07b26bfbd392",
+    "category": "Password Auditing"
     },
     {
         "name": "Introduction to Hashcat.pdf",
     "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/hashcat.png",
         "comment": "I Used Hashcat to explore various attacks, focusing on password recovery through dictionary, brute-force, and other techniques. Analyzed cracking statistics, kernel performance, and candidate generation. I also demonstrated password cracking while interpreting Hashcat’s output metrics, session details, and recovery status.",
     "youtube": "https://youtu.be/ztL9rIVOtGE?si=7FRgo1Sz2PCgQ04B",
-    "medium": "https://medium.com/@krishdograa/introduction-to-hashcat-your-complete-guide-to-password-cracking-9772021eae6f"
+    "medium": "https://medium.com/@krishdograa/introduction-to-hashcat-your-complete-guide-to-password-cracking-9772021eae6f",
+    "category": "Password Auditing"
     },
     {
         "name": "malware-analysis.docx",

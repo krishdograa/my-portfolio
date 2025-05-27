@@ -88,14 +88,13 @@ async function fetchReports() {
     reportsContainer.innerHTML = "<p>Loading reports...</p>";
 
     try {
-        // Fetch data
         const [filesRes, jsonRes] = await Promise.all([
             fetch(GITHUB_REPORTS_FOLDER),
             fetch(REPORTS_JSON_URL)
         ]);
 
         if (!filesRes.ok || !jsonRes.ok) throw new Error("Data fetch failed");
-        
+
         const [filesData, jsonData] = await Promise.all([
             filesRes.json(),
             jsonRes.json()
@@ -103,50 +102,75 @@ async function fetchReports() {
 
         reportsContainer.innerHTML = "";
 
-        // Process files
-        for (const file of filesData) {
+        // Group by category
+        const categories = {};
+
+        filesData.forEach(file => {
             const reportInfo = jsonData.find(item => item.name === file.name);
-            if (!reportInfo) continue;
+            if (!reportInfo) return;
 
-            const reportDiv = document.createElement("div");
-            reportDiv.className = "report-item";
+            const category = reportInfo.category || "Uncategorized";
+            if (!categories[category]) {
+                categories[category] = [];
+            }
 
-            reportDiv.innerHTML = `
-                ${reportInfo.image ? `
-                    <img src="${reportInfo.image}" 
-                         alt="${file.name}" 
-                         class="report-image"
-                         "> <!-- Remove if image fails to load -->
-                ` : ''}
-                
-                ${reportInfo.comment ? `<p class="report-comment">${reportInfo.comment}</p>` : ''}
-                
+            categories[category].push({ file, reportInfo });
+        });
 
-                ${reportInfo.youtube ? `
-        <p>
-          <a href="${reportInfo.youtube}" 
-             target="_blank" 
-             class="youtube-link" 
-             style="color: #e62117; font-weight: bold; ">
-            ▶ Watch  Video
-          </a>
-        </p>` : ''}
+        // Render grouped reports
+        for (const [categoryName, reports] of Object.entries(categories)) {
+            const sectionHeader = document.createElement("h3");
+            sectionHeader.textContent = categoryName;
+            sectionHeader.style.color = "#fff";
+            sectionHeader.style.marginTop = "30px";
+            reportsContainer.appendChild(sectionHeader);
 
-        <a href="${reportInfo.medium}" 
-             target="_blank" 
-             
-             style="color: white; font-weight: bold; ">
-            ▶ See it on Medium
-          </a>
+            const groupDiv = document.createElement("div");
+            groupDiv.className = "report-group";
+            groupDiv.style.display = "flex";
+            groupDiv.style.flexWrap = "wrap";
+            groupDiv.style.gap = "10px";
 
-        <a href="${file.download_url}" 
-                   target="_blank" 
-                   class="report-link">
-                 ▶ Download Report 
-                </a>
-            `;
+            for (const { file, reportInfo } of reports) {
+                const reportDiv = document.createElement("div");
+                reportDiv.className = "report-item";
 
-            reportsContainer.appendChild(reportDiv);
+                reportDiv.innerHTML = `
+                    ${reportInfo.image ? `
+                        <img src="${reportInfo.image}" 
+                            alt="${file.name}" 
+                            class="report-image">` : ''}
+
+                    ${reportInfo.comment ? `<p class="report-comment">${reportInfo.comment}</p>` : ''}
+
+                    ${reportInfo.youtube ? `
+                        <p>
+                            <a href="${reportInfo.youtube}" 
+                            target="_blank" 
+                            class="youtube-link"
+                            style="color: #e62117; font-weight: bold;">
+                                ▶ Watch Video
+                            </a>
+                        </p>` : ''}
+
+                    ${reportInfo.medium ? `
+                        <a href="${reportInfo.medium}" 
+                            target="_blank" 
+                            style="color: white; font-weight: bold;">
+                            ▶ See it on Medium
+                        </a>` : ''}
+
+                    <a href="${file.download_url}" 
+                        target="_blank" 
+                        class="report-link">
+                        ▶ Download Report 
+                    </a>
+                `;
+
+                groupDiv.appendChild(reportDiv);
+            }
+
+            reportsContainer.appendChild(groupDiv);
         }
 
     } catch (error) {
@@ -154,6 +178,7 @@ async function fetchReports() {
         reportsContainer.innerHTML = `<p class="error">Failed to load reports: ${error.message}</p>`;
     }
 }
+
 
 // Call function on page load
 fetchReports();
