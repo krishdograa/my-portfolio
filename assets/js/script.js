@@ -122,7 +122,7 @@ async function fetchReports() {
             const sectionHeader = document.createElement("h3");
             sectionHeader.textContent = categoryName;
             sectionHeader.style.color = "#fff";
-            sectionHeader.style.marginTop = "-15px";
+            sectionHeader.style.marginTop = "10px";
             reportsContainer.appendChild(sectionHeader);
 
             const groupDiv = document.createElement("div");
