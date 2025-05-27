@@ -25,19 +25,28 @@
     "category": "Password Auditing"
     },
     {
-        "name": "malware-analysis.docx",
-    "image": "",
-        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction",
-    "youtube": "",
-    "medium": ""
+        "name": "Introduction to Hashcat.pdf",
+    "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/hashcat.png",
+        "comment": "I Used Hashcat to explore various attacks, focusing on password recovery through dictionary, brute-force, and other techniques. Analyzed cracking statistics, kernel performance, and candidate generation. I also demonstrated password cracking while interpreting Hashcat’s output metrics, session details, and recovery status.",
+    "youtube": "https://youtu.be/ztL9rIVOtGE?si=7FRgo1Sz2PCgQ04B",
+    "medium": "https://medium.com/@krishdograa/introduction-to-hashcat-your-complete-guide-to-password-cracking-9772021eae6f",
+    "category": "Password Auditing"
     },
     {
-        "name": "malware-analysis.docx",
-        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+        "name": "Introduction to Hashcat.pdf",
+    "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/hashcat.png",
+        "comment": "I Used Hashcat to explore various attacks, focusing on password recovery through dictionary, brute-force, and other techniques. Analyzed cracking statistics, kernel performance, and candidate generation. I also demonstrated password cracking while interpreting Hashcat’s output metrics, session details, and recovery status.",
+    "youtube": "https://youtu.be/ztL9rIVOtGE?si=7FRgo1Sz2PCgQ04B",
+    "medium": "https://medium.com/@krishdograa/introduction-to-hashcat-your-complete-guide-to-password-cracking-9772021eae6f",
+    "category": "Forensics"
     },
     {
-        "name": "malware-analysis.docx",
-        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction"
+        "name": "Introduction to Hashcat.pdf",
+    "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/hashcat.png",
+        "comment": "I Used Hashcat to explore various attacks, focusing on password recovery through dictionary, brute-force, and other techniques. Analyzed cracking statistics, kernel performance, and candidate generation. I also demonstrated password cracking while interpreting Hashcat’s output metrics, session details, and recovery status.",
+    "youtube": "https://youtu.be/ztL9rIVOtGE?si=7FRgo1Sz2PCgQ04B",
+    "medium": "https://medium.com/@krishdograa/introduction-to-hashcat-your-complete-guide-to-password-cracking-9772021eae6f",
+    "category": "Forensics"
     },
     {
         "name": "malware-analysis.docx",
