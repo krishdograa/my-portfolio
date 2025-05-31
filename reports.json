@@ -25,11 +25,12 @@
     "category": "Password Auditing"
     },
     {
-        "name": "malware-analysis.docx",
-    "image": "",
-        "comment": "In-depth analysis of Emotet malware behavior and IOC extraction",
+        "name": "THC Hydra.pdf",
+    "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/THC%20Hydra.png",
+        "comment": "In this project, I explored THC-Hydra to perform brute-force attacks on various network services including FTP, SSH, HTTP (Basic and Form Auth), SMB, and VNC. I set up local test environments to simulate real-world login scenarios and tested Hydra’s capabilities in ethical password auditing.",
     "youtube": "",
-    "medium": ""
+    "medium": "",
+    "category": "Password Auditing"
     },
     {
         "name": "malware-analysis.docx",
