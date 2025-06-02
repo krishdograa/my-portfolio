@@ -247,10 +247,10 @@ body {
   color: var(--white);
   font-family: var(--ff-barlow);
   padding-block: 3px;
-  transition: var(--transition-1);
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-.navbar-link:is(:hover, :focus) { color: lightskyblue; }
+.navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
 
 .navbar .btn {
   background-color: lightskyblue;
@@ -664,6 +664,66 @@ button:active .button_top {
   background-color: rgb(58, 69, 83);
 }
 
+
+.tab-container-exp {
+ max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  min-height: 250px;
+}
+
+.tab-buttons-exp {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-btn-exp {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-btn-exp.active-exp {
+  background-color: var(--orange-soda);
+}
+
+.tab-content-exp {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  background: #2c2c2c;
+  padding: 0 20px;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  width: 100%;
+
+}
+
+.tab-content-exp.active-exp {
+   opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  height: auto;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+
 /*-----------------------------------*\
   #SKILLS
 \*-----------------------------------*/
@@ -702,6 +762,60 @@ button:active .button_top {
   background-color: var(--orange-soda);
   height: 100%;
   border-radius: inherit;
+}
+
+.tab-container-skill {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  min-height: 250px;
+}
+
+.tab-buttons-skill {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-btn-skill {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-btn-skill.active-skill {
+  background-color: var(--orange-soda);
+}
+
+.tab-content-skill {
+   opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  background: #2c2c2c;
+  padding: 0 20px;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  width: 100%;
+}
+
+.tab-content-skill.active-skill {
+   opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  height: auto;
+  padding: 20px;
+  position: relative;
 }
 
 
@@ -896,6 +1010,7 @@ textarea.contact-input {
     justify-content: space-between;
     margin: 0;
     box-sizing: border-box;
+     position: relative;
 }
 
 
@@ -921,6 +1036,79 @@ textarea.contact-input {
     justify-content: flex-start; /* or center, depending on preference */
     gap: 10px;
 }
+
+
+.popup-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+   
+}
+
+.popup-card p {
+    margin: 10px 0;
+}
+
+.popup-card a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.popup-card a:hover {
+    color: var(--orange-soda);
+}
+
+.popup-card.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hidden {
+    display: none;
+}
+
+.view-more-btn {
+    background-color: white;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.view-more-btn:hover {
+  background-color: black;
+  color: white;
+
+}
+
+.close-popup-btn {
+    margin-top: 15px;
+    padding: 6px 12px;
+    background-color: #e62117;
+    color: white;
+    transition: background-color 0.4s ease, color 0.4s ease;  
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-popup-btn:hover{
+    background-color: white;
+    color: #e62117;
+
+}
+
 
 
 
