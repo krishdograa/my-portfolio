@@ -146,7 +146,7 @@ async function fetchReports() {
             ${reportInfo.youtube ? `<p><a href="${reportInfo.youtube}" target="_blank" class="youtube-link">▶ Watch Video</a></p>` : ''}
             ${reportInfo.medium ? `<p><a href="${reportInfo.medium}" target="_blank" class="medium-link">▶ See it on Medium</a></p>` : ''}
             <p><a href="${file.download_url}" target="_blank" class="download-link">▶ Download Report</a></p>
-            <br><button class="close-popup-btn">Close</button>
+            <button class="close-popup-btn">&times</button>
         </div>
     `;
 
@@ -289,5 +289,50 @@ function showTabskill(evt, tabId) {
   document.getElementById(tabId).classList.add("active-skill");
   evt.currentTarget.classList.add("active-skill");
 }
+
+const certDescriptions = {
+    cert1: `<h3>Introduction to Cybersecurity - Cisco</h3><br><p style="text-align:justify;">This certification provided a strong foundation in essential cybersecurity concepts, including threats, vulnerabilities, and best practices. It helped me understand the importance of securing digital assets and networks. Through this program, I gained practical insights into real-world cyber risks, enhanced my critical thinking, and developed a deeper interest in pursuing a career in cybersecurity.</p>`,
+
+    cert2: `<h3>Ericsson Edge Academia Program - Erricson</h3><br><p style="text-align:justify;">This certification significantly deepened my knowledge of 5G, edge computing, and network transformation. It offered hands-on learning, real-world insights, and prepared me for future roles in the evolving telecom and technology landscape. This program not only strengthened my technical foundation but also enhanced my problem-solving and industry-readiness, empowering me to contribute meaningfully to advanced digital solutions.</p>`,
+
+    cert3: `<h3>Cloud Computing - NPTEL(IIT Kharagpur)</h3><br><p style="text-align:justify;">The NPTEL Cloud Computing certification provided in-depth knowledge of cloud models, virtualization, deployment techniques, and services like IaaS, PaaS, and SaaS. It strengthened my understanding of distributed computing and scalable architecture. The course enhanced my technical skills and prepared me to work with modern cloud platforms and infrastructure.</p>`,
+
+    cert4: `<h3>Python for Data Science - NPTEL(IIT Madras)</h3><br><p style="text-align:justify;">The NPTEL Python for Data Science certification helped me build strong foundations in Python programming, data handling, and libraries like NumPy, Pandas, and Matplotlib. It equipped me with essential data analysis skills and practical experience, empowering me to explore real-world data problems and pursue opportunities in data-driven fields.
+
+</p>`,
+
+    cert5: `<h3>Python(Basics) - HackerRank</h3><br><p style="text-align:justify;">This certification validated my fundamental programming skills in Python, including data types, loops, functions, and conditionals. It strengthened my logical thinking and problem-solving abilities through hands-on coding challenges. This certification boosted my confidence in writing efficient Python code and laid a solid foundation for advanced learning.</p>`,
+
+  };
+
+  function openModal(certId) {
+    document.getElementById('cert-desc-content').innerHTML = certDescriptions[certId];
+    document.getElementById('cert-modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('cert-modal').style.display = 'none';
+  }
+
+  // Optional: close modal when clicking outside
+  window.onclick = function (event) {
+    const modal = document.getElementById('cert-modal');
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+  
+
+  document.getElementById("secureForm").addEventListener("submit", function(event) {
+    var captchaResponse = grecaptcha.getResponse();
+    if (captchaResponse.length === 0) {
+      event.preventDefault(); // Stop form from submitting
+      document.getElementById("captcha-popup").style.display = "flex"; // Show custom popup
+    }
+  });
+
+  function closeCaptchaPopup() {
+    document.getElementById("captcha-popup").style.display = "none";
+  }
 
 

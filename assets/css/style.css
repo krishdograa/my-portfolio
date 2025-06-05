@@ -341,11 +341,12 @@ button {
   box-sizing: border-box;
   border: 2px solid var(--button_outline_color);
   border-radius: var(--button_radius);
-  padding: 0.75em 1.5em;
+  padding: 0.75em 1.65em;
   background: var(--button_color);
   color: var(--button_outline_color);
   transform: translateY(-0.2em);
   transition: transform 0.1s ease;
+  text-align: center;
 }
 
 button:hover .button_top {
@@ -668,7 +669,6 @@ button:active .button_top {
 .tab-container-exp {
  max-width: 800px;
   margin: 0 auto;
-  text-align: center;
   padding: 40px 20px;
   position: relative;
   min-height: 250px;
@@ -709,6 +709,7 @@ button:active .button_top {
   color: white;
   position: absolute;
   width: 100%;
+  text-align: justify;
 
 }
 
@@ -719,6 +720,54 @@ button:active .button_top {
   height: auto;
   padding: 20px;
   position: relative;
+}
+
+.date-exp{
+  position: absolute;
+  top: 5%;
+  right: 4%;
+  cursor: pointer;
+
+}
+
+.loc-exp{
+  position: absolute;
+  top: 10%;
+  right: 4%;
+  cursor: pointer;
+
+}
+
+.date-exp-2{
+  position: absolute;
+  top: 54%;
+  right: 4%;
+  cursor: pointer;
+
+}
+
+.loc-exp-2{
+  position: absolute;
+  top: 59%;
+  right: 4%;
+  cursor: pointer;
+
+}
+
+.date-edu-1{
+  position: absolute;
+  top:12%;
+  right: 5%;
+  cursor: pointer;
+
+}
+
+.date-edu-2{
+  position: absolute;
+  top: 58%;
+  right: 5%;
+  cursor: pointer;
+
 }
 
 
@@ -819,6 +868,78 @@ button:active .button_top {
 }
 
 
+.tech-box{
+  background-color: black;
+  border-radius: 10px; padding: 15px ;
+  margin-top: 10px;
+
+}
+
+.tech-box-info{
+  color: hsl(7, 96%, 61%);
+}
+
+
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cert-item {
+  width: 48%;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.cert-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.cert-item img:hover {
+  transform: scale(1.05);
+}
+
+.text-cert{
+  background-color: hsl(7, 96%, 61%); color: white; border-radius: 7px; margin-top: 5px
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
 
 
 
@@ -906,6 +1027,54 @@ textarea.contact-input {
 
 .contact-item-link:not(address):is(:hover, :focus) { color: var(--white); }
 
+.g-recaptcha {
+
+  transform: scale(1);
+  transform-origin: 0 0;
+  background-color: var(--white);
+  color: var(--manatee);
+  border-radius: var(--radius-5);
+  font-size: var(--fs-5);
+  margin-block-end: 15px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #2c2c2c;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px #000;
+}
+
+.popup-content button {
+  margin-top: 10px;
+  background: var(--orange-soda);
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.popup-content button:hover {
+  background: #fff;
+  color: var(--orange-soda);
+}
 
 
 
@@ -1093,21 +1262,23 @@ textarea.contact-input {
 }
 
 .close-popup-btn {
-    margin-top: 15px;
-    padding: 6px 12px;
-    background-color: #e62117;
-    color: white;
-    transition: background-color 0.4s ease, color 0.4s ease;  
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
+    
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  background-color: inherit;
+  color: hsl(7, 96%, 61%);
+  font-size: 35px;
+
 }
 
 .close-popup-btn:hover{
-    background-color: white;
-    color: #e62117;
-
+  color: hsl(7, 68%, 41%);
 }
+
+
 
 
 

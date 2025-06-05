@@ -29,7 +29,7 @@
     "image": "https://raw.githubusercontent.com/krishdograa/my-portfolio/main/report-images/THC%20Hydra.png",
         "comment": "In this project, I explored THC-Hydra to perform brute-force attacks on various network services including FTP, SSH, HTTP (Basic and Form Auth), SMB, and VNC. I set up local test environments to simulate real-world login scenarios and tested Hydra’s capabilities in ethical password auditing.",
     "youtube": "",
-    "medium": "",
+    "medium": "https://medium.com/@krishdograa/thc-hydra-4a1384d6a447",
     "category": "Password Auditing"
     },
     {
