@@ -1395,7 +1395,7 @@ textarea.contact-input {
 @media (max-width: 430px) {
 .card {
   max-width: 100%;
-  height: 190px;
+  height: 150px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -1408,6 +1408,12 @@ textarea.contact-input {
   box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
 
 }
+
+  .blog-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    margin-left: -6%;
+  }
 
 
 .button_top {
@@ -1424,6 +1430,13 @@ textarea.contact-input {
   font-size: 1.4rem;
   margin-top: -1.7rem;
 }
+
+
+.header{
+  background-color: black;
+  min-height: 80px;
+}
+
 
 .hero-title {
     --fs-5: 2.2rem;
@@ -1468,6 +1481,19 @@ textarea.contact-input {
   transition: 0.3s;
   text-align: center;
 }
+
+.social-btn:hover {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+
+.social-btn:hover span {
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  }
+
 
 #twitter svg {
   fill: #1da1f2;
@@ -1531,6 +1557,40 @@ textarea.contact-input {
     grid-row: span 5 / span 5;
     grid-column-start: 4;
 }
+
+.date-exp{
+visibility: hidden;
+}
+
+.loc-exp{
+visibility: hidden;
+}
+
+.date-exp-2{
+visibility: hidden;
+}
+
+.loc-exp-2{
+visibility: hidden;
+
+}
+
+.date-edu-1{
+visibility: hidden;
+}
+
+.date-edu-2{
+visibility: hidden;
+}
+
+.cert-item {
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+
 
 
 
