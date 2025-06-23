@@ -78,12 +78,24 @@ strong,
 button,
 textarea,
 ion-icon { display: block; }
+ul {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
 
 img { height: auto; }
 
 ion-icon {
   pointer-events: none;
   color: var(--white);
+}
+
+
+#daily-log{  scroll-margin-top: 40px;
+}
+#about{
+  scroll-margin-top: -90px;
 }
 
 button,
@@ -116,6 +128,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+
+
 
 :focus-visible { outline-offset: 4px; }
 
@@ -192,70 +206,93 @@ body {
 
 .header {
   position: fixed;
-  padding-block: 15px;
-  width: 100%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px; /* reduced padding */
+  width: max-content;
   background-color: var(--space-cadet);
-  height: 65px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
+  border-radius: 35px;
+  box-shadow: black;
+  z-index: 9999;
   transition: 0.25s var(--cubic-out);
-  z-index: 4;
-}
-
-.header.nav-active {
-  height: 200px;
-  transition-duration: 0.35s;
 }
 
 .header > .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* slightly tighter */
+}
+
+.navbar {
+  position: static;
+  visibility: visible;
+  padding-inline: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.logo {
-  color: var(--white);
-  font-family: var(--ff-poppins);
-  font-size: 2.4rem;
-}
-
-.nav-toggle-btn { font-size: 3rem; }
-
-.nav-toggle-btn .close-icon,
-.nav-toggle-btn.active .menu-icon { display: none; }
-
-.nav-toggle-btn.active .close-icon,
-.nav-toggle-btn .menu-icon { display: block; }
-
-.navbar {
-  position: absolute;
-  top: 65px;
-  left: 0;
-  width: 100%;
-  padding-inline: 20px;
-  visibility: hidden;
-  opacity: 0;
-  transition: var(--transition-2);
-}
-
-.header.nav-active .navbar {
-  visibility: visible;
-  opacity: 1;
+.navbar-list {
+  display: flex;
+  gap: 14px; /* tighter space between items */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
 }
 
 .navbar-link {
+  position: relative;
   color: var(--white);
   font-family: var(--ff-barlow);
-  padding-block: 3px;
-  transition: background-color 0.6s ease, color 0.6s ease;
+  padding: 6px 14px; /* smaller buttons */
+  font-size: 20px; /* slightly smaller text */
+  border-radius: 40px;
+  z-index: 2;
+  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
-
-.navbar .btn {
-  background-color: lightskyblue;
-  margin-block-start: 15px;
+.navbar-link:hover,
+.navbar-link:focus {
+  color: var(--orange-soda);
 }
+
+.navbar-link.active {
+  background-color: var(--orange-soda);
+  color: var(--white);
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--orange-soda);
+  border-radius: 40px;
+  z-index: 1;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-toggle-btn {
+  display: none;
+}
+
+.navbar,
+.navbar-inner,
+.navbar-list {
+  background-color: transparent;
+}
+
 
 
 
@@ -387,6 +424,7 @@ button:active .button_top {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 }
 
 .social-btn {
@@ -768,6 +806,162 @@ button:active .button_top {
   right: 5%;
   cursor: pointer;
 
+}
+
+.card-home {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238)black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+  border-radius: 10px;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: white;
+  transition-duration: .3s;
+  .socialSvg path{
+    fill: white;
+  }
+}
+
+
+.gmail-icon-wrapper svg path {
+  fill: black;
+  transition: fill 0.3s ease;
+}
+
+
+.gmail-icon-wrapper:hover svg path:nth-child(1) {
+  fill: #4caf50 !important;
+}
+.gmail-icon-wrapper:hover svg path:nth-child(2) {
+  fill: #1e88e5 !important;
+}
+.gmail-icon-wrapper:hover svg path:nth-child(3) {
+  fill: #e53935 !important;
+}
+.gmail-icon-wrapper:hover svg path:nth-child(4) {
+  fill: #c62828 !important;
+}
+.gmail-icon-wrapper:hover svg path:nth-child(5) {
+  fill: #fbc02d !important;
+}
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #222;
+  transition-duration: .3s;
+  .socialSvg path {
+    fill: white;
+  }
+}
+
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+  .socialSvg path{
+    fill: white;
+  }
+}
+
+.medium-icon-wrapper {
+  display: inline-block;
+  border-radius: 50%; /* optional: makes it round */
+  transition: background-color 0.3s ease;
+}
+
+.medium-icon-wrapper .socialContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* spacing around the icon */
+
+  transition: background-color 0.3s ease;
+}
+
+.medium-icon-wrapper svg path {
+  fill:black;
+  transition: fill 0.3s ease;
+  color: inherit;
+}
+
+.medium-icon-wrapper:hover .socialContainer {
+  background-color: #222;
+}
+
+.medium-icon-wrapper:hover svg path {
+  fill: #ffffff;
+}
+
+
+
+.containerFour:hover {
+  background-color: white;
+  transition-duration: .3s;
+}
+
+/* Make the path white initially */
+.whatsapp-icon-wrapper svg path {
+  fill: black;
+  transition: fill 0.3s ease;
+}
+
+/* On hover: restore to original red color (#FF0000) */
+.whatsapp-icon-wrapper:hover svg path {
+  fill: #FF0000;
+}
+
+.whatsapp-icon-wrapper {
+  cursor: pointer;
+}
+
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 25px;
+}
+
+.socialSvg path {
+  fill: black;
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 
@@ -1720,7 +1914,7 @@ visibility: hidden;
 
   .header.active {
     background-color: #18191A;
-    box-shadow: var(--shadow);
+    
     padding-block: 20px;
   }
 
